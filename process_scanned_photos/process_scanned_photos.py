@@ -94,7 +94,7 @@ def save_contours(
             (x, y, w, h) = cv2.boundingRect(box)
             photo = image[y:y + h, x:x + w]
             
-            output_path = os.path.join(output_dir, f"{filename}_{i}.png")
+            output_path = os.path.join(output_dir, f"{filename}_{i + 1}.png")
             cv2.imwrite(output_path, photo)
 
 
